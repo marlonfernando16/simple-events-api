@@ -25,7 +25,7 @@ SECRET_KEY = 'vakac!t&63j8vco@x2e#a=%!4ucbm%+#_k1vi(2ao6j9u&4c^@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['s-events-api.herokuapp.com']
 
 
 # Application definition
