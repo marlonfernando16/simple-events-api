@@ -25,7 +25,7 @@ SECRET_KEY = 'vakac!t&63j8vco@x2e#a=%!4ucbm%+#_k1vi(2ao6j9u&4c^@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['s-events-api.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['s-events-api.herokuapp.com']
 
 
 # Application definition
@@ -83,6 +83,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -119,4 +120,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
