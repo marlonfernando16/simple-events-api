@@ -1,12 +1,12 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-class User(models.Model):
+class User(AbstractUser):
     nome = models.CharField(verbose_name="Nome", max_length=255, blank=False)
     telefone = models.CharField(verbose_name="Telefone", max_length=255, blank=False)
-    email = models.CharField(verbose_name="Email", max_length=255, blank=False)
-    senha = models.CharField(verbose_name="Senha", max_length=255, blank=False)
     data_nascimento = models.DateField(verbose_name="Data de Nascimento")
+    admin = models.BooleanField(verbose_name='Status de Admin', default=False)
 
     def __str__(self):
         return self.nome
