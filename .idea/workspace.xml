@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb9437a0-f430-4e81-a6c9-737e89159bc9" name="Default Changelist" comment="Define variável de ambiente para a SECRET_KEY">
+    <list default="true" id="fb9437a0-f430-4e81-a6c9-737e89159bc9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_events_backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_events_backend/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +124,7 @@
       <workItem from="1573604048223" duration="3516000" />
       <workItem from="1574208020489" duration="5754000" />
       <workItem from="1574789516075" duration="786000" />
-      <workItem from="1575051834800" duration="4998000" />
+      <workItem from="1575051834800" duration="5265000" />
     </task>
     <task id="LOCAL-00001" summary="Insere dependência para variáveis de ambiente">
       <created>1575056146688</created>
@@ -141,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575056230624</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Define variável de ambiente para o banco de dados postgrs e o sqlite como banco de dados default">
+      <created>1575060744652</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575060744652</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +172,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Insere dependência para variáveis de ambiente" />
     <MESSAGE value="Define variável de ambiente para a SECRET_KEY" />
-    <option name="LAST_COMMIT_MESSAGE" value="Define variável de ambiente para a SECRET_KEY" />
+    <MESSAGE value="Define variável de ambiente para o banco de dados postgrs e o sqlite como banco de dados default" />
+    <MESSAGE value="Adiciona dependência dj-database-url==0.5.0 e organiza requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adiciona dependência dj-database-url==0.5.0 e organiza requirements.txt" />
   </component>
 </project>
