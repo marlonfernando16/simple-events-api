@@ -124,7 +124,8 @@
       <workItem from="1573604048223" duration="3516000" />
       <workItem from="1574208020489" duration="5754000" />
       <workItem from="1574789516075" duration="786000" />
-      <workItem from="1575051834800" duration="5265000" />
+      <workItem from="1575051834800" duration="6648000" />
+      <workItem from="1575086588785" duration="366000" />
     </task>
     <task id="LOCAL-00001" summary="Insere dependência para variáveis de ambiente">
       <created>1575056146688</created>
@@ -147,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575060744652</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adiciona dependência dj-database-url==0.5.0 e organiza requirements.txt">
+      <created>1575060836696</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575060836696</updated>
+    </task>
+    <task id="LOCAL-00005" summary="config xml">
+      <created>1575061146680</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575061146680</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +189,7 @@
     <MESSAGE value="Define variável de ambiente para a SECRET_KEY" />
     <MESSAGE value="Define variável de ambiente para o banco de dados postgrs e o sqlite como banco de dados default" />
     <MESSAGE value="Adiciona dependência dj-database-url==0.5.0 e organiza requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adiciona dependência dj-database-url==0.5.0 e organiza requirements.txt" />
+    <MESSAGE value="config xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="config xml" />
   </component>
 </project>
