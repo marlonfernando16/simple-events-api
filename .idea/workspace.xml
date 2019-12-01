@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb9437a0-f430-4e81-a6c9-737e89159bc9" name="Default Changelist" comment="">
+    <list default="true" id="fb9437a0-f430-4e81-a6c9-737e89159bc9" name="Default Changelist" comment="Insere dependencia do drive do postgres no requirements.xtx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_events_backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_events_backend/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +126,8 @@
       <workItem from="1574208020489" duration="5754000" />
       <workItem from="1574789516075" duration="786000" />
       <workItem from="1575051834800" duration="6648000" />
-      <workItem from="1575086588785" duration="366000" />
+      <workItem from="1575086588785" duration="5151000" />
+      <workItem from="1575152913752" duration="7613000" />
     </task>
     <task id="LOCAL-00001" summary="Insere dependência para variáveis de ambiente">
       <created>1575056146688</created>
@@ -162,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575061146680</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Insere dependencia do drive do postgres no requirements.xtx">
+      <created>1575087097870</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575087097870</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +199,7 @@
     <MESSAGE value="Define variável de ambiente para o banco de dados postgrs e o sqlite como banco de dados default" />
     <MESSAGE value="Adiciona dependência dj-database-url==0.5.0 e organiza requirements.txt" />
     <MESSAGE value="config xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="config xml" />
+    <MESSAGE value="Insere dependencia do drive do postgres no requirements.xtx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Insere dependencia do drive do postgres no requirements.xtx" />
   </component>
 </project>
