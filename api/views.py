@@ -11,7 +11,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     queryset = models.User.objects.all()
     serializer_class = serializers.UserSerializer
-    # permission_classes = [AppPermision]
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class EventoViewSet(viewsets.ModelViewSet):
