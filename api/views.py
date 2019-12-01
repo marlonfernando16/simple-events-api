@@ -17,6 +17,8 @@ class UserViewSet(viewsets.ModelViewSet):
 class EventoViewSet(viewsets.ModelViewSet):
 
     queryset = models.Evento.objects.all()
+    permission_classes = [AppPermision]
+
     serializer_class = serializers.EventoSerializer
     # permission_classes = [AppPermision]
 
