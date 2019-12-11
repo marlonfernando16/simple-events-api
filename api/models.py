@@ -19,7 +19,7 @@ class User(AbstractUser):
 class Evento(models.Model):
     nome = models.CharField(max_length=255, blank=False, unique=True)
     descricao = models.CharField(max_length=255, blank=False, unique=True)
-    owner = models.ForeignKey(User, verbose_name="Owner", related_name="eventos", on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, verbose_name="Proprietário", related_name="eventos", on_delete=models.CASCADE)
     data = models.DateField(verbose_name="Data")
     local = models.CharField(verbose_name="Local", max_length=255, blank=False, unique=True)
     finalizado = models.NullBooleanField()
