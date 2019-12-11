@@ -9,6 +9,9 @@ class UserSerializer(serializers.ModelSerializer):
 
         model = models.User
         fields = ['nome', 'username', 'telefone', 'data_nascimento', 'email', 'password']
+        extra_kwargs = {
+            'password': {'write_only': True}
+        }
 
 
 class EventoSerializer(serializers.ModelSerializer):
