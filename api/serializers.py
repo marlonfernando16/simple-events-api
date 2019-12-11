@@ -18,6 +18,7 @@ class EventoSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Evento
         fields = '__all__'
+        read_only_fields = ['owner', 'finalizado']
 
 
 class EspecialidadeSerializer(serializers.ModelSerializer):
