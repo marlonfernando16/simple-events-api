@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96309460-ccb6-4f6b-aff8-6948b88513f4" name="Default Changelist" comment="" />
+    <list default="true" id="96309460-ccb6-4f6b-aff8-6948b88513f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../api/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1Q2LvsMo5u3pGa2dNgfGgbUgn9e" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -61,10 +73,22 @@
       <option name="presentableId" value="Default" />
       <updated>1566963978746</updated>
       <workItem from="1566963986901" duration="45000" />
+      <workItem from="1575756046178" duration="142000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

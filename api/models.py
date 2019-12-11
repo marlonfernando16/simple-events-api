@@ -5,8 +5,12 @@ from django.db import models
 class User(AbstractUser):
     nome = models.CharField(verbose_name="Nome", max_length=255, blank=False)
     telefone = models.CharField(verbose_name="Telefone", max_length=255, blank=False)
-    data_nascimento = models.DateField(verbose_name="Data de Nascimento")
+    data_nascimento = models.DateField(verbose_name="Data de Nascimento", blank=False, null=True)
     admin = models.BooleanField(verbose_name='Status de Admin', default=False)
+
+    def save(self, *args, **kwargs):
+        self.set_password(self.password)
+        super(User, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.nome
@@ -15,7 +19,7 @@ class User(AbstractUser):
 class Evento(models.Model):
     nome = models.CharField(max_length=255, blank=False, unique=True)
     descricao = models.CharField(max_length=255, blank=False, unique=True)
-    owner = models.ForeignKey(User, verbose_name="Owner", related_name="eventos", on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, verbose_name="Proprietário", related_name="eventos", on_delete=models.CASCADE)
     data = models.DateField(verbose_name="Data")
     local = models.CharField(verbose_name="Local", max_length=255, blank=False, unique=True)
     finalizado = models.NullBooleanField()
