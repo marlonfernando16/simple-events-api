@@ -8,6 +8,10 @@ class User(AbstractUser):
     data_nascimento = models.DateField(verbose_name="Data de Nascimento", blank=False, null=True)
     admin = models.BooleanField(verbose_name='Status de Admin', default=False)
 
+    def save(self, *args, **kwargs):
+        self.set_password(self.password)
+        super(User, self).save(*args, **kwargs)
+
     def __str__(self):
         return self.nome
 
