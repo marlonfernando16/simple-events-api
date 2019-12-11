@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb9437a0-f430-4e81-a6c9-737e89159bc9" name="Default Changelist" comment="Insere dependencia do drive do postgres no requirements.xtx">
+    <list default="true" id="fb9437a0-f430-4e81-a6c9-737e89159bc9" name="Default Changelist" comment="Adiciona autenticação para o usuário sobre o recurso /users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_events_backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_events_backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_events_backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple_events_backend/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +126,17 @@
       <workItem from="1574789516075" duration="786000" />
       <workItem from="1575051834800" duration="6648000" />
       <workItem from="1575086588785" duration="5151000" />
-      <workItem from="1575152913752" duration="7613000" />
+      <workItem from="1575152913752" duration="14071000" />
+      <workItem from="1575292072012" duration="7733000" />
+      <workItem from="1575305455141" duration="352000" />
+      <workItem from="1575378197359" duration="4095000" />
+      <workItem from="1575496519811" duration="681000" />
+      <workItem from="1575756020984" duration="18000" />
+      <workItem from="1575756255388" duration="223000" />
+      <workItem from="1575942177938" duration="4333000" />
+      <workItem from="1575980893733" duration="7169000" />
+      <workItem from="1575994408650" duration="2717000" />
+      <workItem from="1576003872793" duration="6463000" />
     </task>
     <task id="LOCAL-00001" summary="Insere dependência para variáveis de ambiente">
       <created>1575056146688</created>
@@ -171,7 +180,126 @@
       <option name="project" value="LOCAL" />
       <updated>1575087097870</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="conf xml">
+      <created>1575162849082</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575162849082</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Retira comentário desnecessário">
+      <created>1575178667788</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575178667788</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adiciona autenticação para o usuário sobre o recurso /users">
+      <created>1575178777699</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575178777699</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Permite só requisição GET caso o usuário não se autentique">
+      <created>1575178885044</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575178885044</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Cria teste para cadastrar o evento">
+      <created>1575295548849</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575295548849</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Coloca data como opcional">
+      <created>1576024615089</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576024615089</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Seta o password do usuário com o hash da senha obtida">
+      <created>1576024702191</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576024702191</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Corrige nome do verbose name do campo owner">
+      <created>1576024787777</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576024787777</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Insere dependência para autenticar o usuário">
+      <created>1576024839635</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1576024839636</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Deixa campo senha oculto para operações do tipo GET">
+      <created>1576025670935</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1576025670935</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Configura os campos owner e finalizado apenas para leitura">
+      <created>1576025718026</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1576025718026</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Configura variável de ambiente para o DEBUG">
+      <created>1576026417284</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1576026417284</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Configura django rest para usar autenticação por token">
+      <created>1576026487803</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576026487803</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Insere rota a view rest_framework.authtoken do django">
+      <created>1576026646498</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1576026646498</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Requisita o usuário se autenticar ou só obter os recursos">
+      <created>1576026776991</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576026776991</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Permite todas as operações para qualquer usuário ao recurso /users">
+      <created>1576026872912</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1576026872912</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Seta o user logado ao criar o evento">
+      <created>1576026902139</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1576026902139</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +328,23 @@
     <MESSAGE value="Adiciona dependência dj-database-url==0.5.0 e organiza requirements.txt" />
     <MESSAGE value="config xml" />
     <MESSAGE value="Insere dependencia do drive do postgres no requirements.xtx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Insere dependencia do drive do postgres no requirements.xtx" />
+    <MESSAGE value="conf xml" />
+    <MESSAGE value="Retira comentário desnecessário" />
+    <MESSAGE value="Adiciona autenticação para o usuário sobre o recurso /users" />
+    <MESSAGE value="Permite só requisição GET caso o usuário não se autentique" />
+    <MESSAGE value="Cria teste para cadastrar o evento" />
+    <MESSAGE value="Coloca data como opcional" />
+    <MESSAGE value="Seta o password do usuário com o hash da senha obtida" />
+    <MESSAGE value="Corrige nome do verbose name do campo owner" />
+    <MESSAGE value="Insere dependência para autenticar o usuário" />
+    <MESSAGE value="Deixa campo senha oculto para operações do tipo GET" />
+    <MESSAGE value="Configura os campos owner e finalizado apenas para leitura" />
+    <MESSAGE value="Configura variável de ambiente para o DEBUG" />
+    <MESSAGE value="Configura django rest para usar autenticação por token" />
+    <MESSAGE value="Insere rota a view rest_framework.authtoken do django" />
+    <MESSAGE value="Requisita o usuário se autenticar ou só obter os recursos" />
+    <MESSAGE value="Permite todas as operações para qualquer usuário ao recurso /users" />
+    <MESSAGE value="Seta o user logado ao criar o evento" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seta o user logado ao criar o evento" />
   </component>
 </project>
