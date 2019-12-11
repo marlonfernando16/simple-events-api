@@ -19,7 +19,9 @@ class EventoViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     serializer_class = serializers.EventoSerializer
-    # permission_classes = [AppPermision]
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 class EspecialidadeViewSet(viewsets.ModelViewSet):
