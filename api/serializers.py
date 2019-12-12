@@ -15,6 +15,9 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class EventoSerializer(serializers.ModelSerializer):
+    owner = serializers.SlugRelatedField(many=False, read_only=True,
+                                          slug_field='username')
+    # owner  = UserSerializer(many=False)
     class Meta:
         model = models.Evento
         fields = '__all__'
