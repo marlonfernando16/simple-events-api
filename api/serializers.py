@@ -20,7 +20,7 @@ class EventoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Evento
-        fields = ['nome', 'descricao', 'owner', 'data', 'local', 'finalizado', 'vagas']
+        fields = ['id', 'nome', 'descricao', 'owner', 'data', 'local', 'finalizado', 'vagas']
         read_only_fields = ['owner', 'finalizado', 'vagas']
 
         depth = 1

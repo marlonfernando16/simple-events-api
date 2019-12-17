@@ -5,7 +5,7 @@ from django.db import models
 class User(AbstractUser):
     nome = models.CharField(verbose_name="Nome", max_length=255, blank=False)
     telefone = models.CharField(verbose_name="Telefone", max_length=255, blank=False)
-    data_nascimento = models.DateField(verbose_name="Data de Nascimento", blank=False, null=True)
+    data_nascimento = models.DateField(verbose_name="Data de Nascimento", blank=False)
     admin = models.BooleanField(verbose_name='Status de Admin', default=False)
 
     def save(self, *args, **kwargs):
