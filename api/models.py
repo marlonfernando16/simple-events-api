@@ -17,11 +17,17 @@ class User(AbstractUser):
 
 
 class Evento(models.Model):
-    nome = models.CharField(max_length=255, blank=False, unique=True)
-    descricao = models.CharField(max_length=255, blank=False, unique=True)
-    owner = models.ForeignKey(User, verbose_name="Proprietário", related_name="eventos", on_delete=models.CASCADE)
-    data = models.DateField(verbose_name="Data")
-    local = models.CharField(verbose_name="Local", max_length=255, blank=False, unique=True)
+    nome = models.CharField(max_length=255, blank=False)
+    descricao = models.CharField(max_length=255, blank=False)
+    owner = models.ForeignKey(
+        User,
+        verbose_name="Proprietário",
+        related_name="eventos",
+        on_delete=models.CASCADE,
+        blank=False
+    )
+    data = models.DateField(verbose_name="Data", blank=False)
+    local = models.CharField(verbose_name="Local", max_length=255, blank=False)
     finalizado = models.NullBooleanField()
 
     def __str__(self):
@@ -41,8 +47,13 @@ class Especialidade(models.Model):
 
 
 class Vaga(models.Model):
-    evento = models.ForeignKey(Evento, verbose_name="Evento", related_name="vagas", on_delete=models.CASCADE)
-    qtd_vagas = models.PositiveIntegerField(verbose_name="Quantidade de Vagas", unique=True)
+    evento = models.ForeignKey(
+        Evento,
+        verbose_name="Evento",
+        related_name="vagas",
+        on_delete=models.CASCADE
+    )
+    qtd_vagas = models.PositiveIntegerField(verbose_name="Quantidade de Vagas", blank=False)
     especialidade = models.ForeignKey(
         Especialidade,
         verbose_name='Especialidades',
