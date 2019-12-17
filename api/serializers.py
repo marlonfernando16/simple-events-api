@@ -17,11 +17,13 @@ class UserSerializer(serializers.ModelSerializer):
 class EventoSerializer(serializers.ModelSerializer):
     owner = serializers.SlugRelatedField(many=False, read_only=True,
                                           slug_field='username')
-    # owner  = UserSerializer(many=False)
+
     class Meta:
         model = models.Evento
-        fields = '__all__'
-        read_only_fields = ['owner', 'finalizado']
+        fields = ['nome', 'descricao', 'owner', 'data', 'local', 'finalizado', 'vagas']
+        read_only_fields = ['owner', 'finalizado', 'vagas']
+
+        depth = 1
 
 
 class EspecialidadeSerializer(serializers.ModelSerializer):
