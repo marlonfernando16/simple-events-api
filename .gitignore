@@ -1,5 +1,5 @@
 .env
-.idea
+simple_events_backend/.idea/
 db.sqlite3
 simple_events_backend/api/migrations/__pycache__/
 simple_events_backend/api/__pycache__/
