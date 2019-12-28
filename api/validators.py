@@ -9,9 +9,12 @@ class AppPermision(BasePermission):
         return False
 
 
-class IsAdmin(BasePermission):
+class IsAuthentictedAndIsAdminOrReadyOnly(BasePermission):
 
     def has_permission(self, request, view):
-        if request.user.admin:
-            return True
-        return False
+        return bool(
+            request.method in SAFE_METHODS or
+            request.user and
+            request.user.is_authenticated
+            and request.user.admin
+        )
