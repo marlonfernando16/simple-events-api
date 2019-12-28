@@ -39,6 +39,9 @@ class EspecialidadeSerializer(serializers.ModelSerializer):
 
 
 class VagaSerializer(serializers.ModelSerializer):
+    especialidade = serializers.SlugRelatedField(many=False, read_only=True,
+                                         slug_field='nome')
+
     class Meta:
         model = models.Vaga
         fields = '__all__'
