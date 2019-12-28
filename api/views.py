@@ -15,8 +15,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class EventoViewSet(viewsets.ModelViewSet):
 
     queryset = models.Evento.objects.all()
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
+    permission_classes = (validators.IsAuthentictedAndIsAdminOrReadyOnly,)
     serializer_class = serializers.EventoSerializer
 
     def perform_create(self, serializer):
@@ -34,7 +33,7 @@ class EspecialidadeViewSet(viewsets.ModelViewSet):
 
     queryset = models.Especialidade.objects.all()
     serializer_class = serializers.EspecialidadeSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly, validators.IsAdmin)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class VagaViewSet(viewsets.ModelViewSet):
