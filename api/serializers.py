@@ -18,6 +18,12 @@ class EventoSerializer(serializers.ModelSerializer):
     owner = serializers.SlugRelatedField(many=False, read_only=True,
                                           slug_field='username')
 
+    vagas = serializers.HyperlinkedRelatedField(
+        many=True,
+        read_only=True,
+        view_name='vaga-detail'
+    )
+
     class Meta:
         model = models.Evento
         fields = ['id', 'nome', 'descricao', 'owner', 'data', 'local', 'finalizado', 'vagas']
