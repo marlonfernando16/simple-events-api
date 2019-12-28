@@ -37,7 +37,7 @@ class EspecialidadeViewSet(viewsets.ModelViewSet):
 
     queryset = models.Especialidade.objects.all()
     serializer_class = serializers.EspecialidadeSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, validators.IsAdmin)
 
 
 class VagaViewSet(viewsets.ModelViewSet):
