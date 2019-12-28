@@ -22,10 +22,7 @@ class EventoViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         evento = serializer.save(owner=self.request.user)
         for vaga in self.request.data.get('vagas'):
-            print(vaga[0])
-            print(vaga[1])
             especialidade = get_object_or_404(models.Especialidade, nome=vaga[0])
-            print(especialidade)
             models.Vaga.objects.create(
                 evento=evento,
                 qtd_vagas=vaga[1],
