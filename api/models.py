@@ -80,6 +80,9 @@ class CandidatoVaga(models.Model):
     nota_desempenho = models.PositiveIntegerField(verbose_name="Nota  de Desempenho", blank=True, null=True)
     state_vaga = models.PositiveSmallIntegerField(verbose_name="Status da Vaga", choices=TIPO_CHOICES)
 
+    def __str__(self):
+        return f"Candidato {self.candidato.nome}. Vaga {self.vaga.especialidade.nome}."
+
 
 class AvaliacaoEvento(models.Model):
     evento = models.ForeignKey(
