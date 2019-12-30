@@ -15,13 +15,10 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class EventoSerializer(serializers.ModelSerializer):
-    owner = serializers.SlugRelatedField(many=False, read_only=True,
-                                          slug_field='username')
-
-    vagas = serializers.HyperlinkedRelatedField(
-        many=True,
+    owner = serializers.SlugRelatedField(
+        many=False,
         read_only=True,
-        view_name='vaga-detail'
+        slug_field='username'
     )
 
     class Meta:
