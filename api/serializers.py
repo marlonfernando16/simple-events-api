@@ -14,12 +14,22 @@ class UserSerializer(serializers.ModelSerializer):
         }
 
 
+class VagaSerializer(serializers.ModelSerializer):
+    especialidade = serializers.SlugRelatedField(many=False, read_only=True,
+                                         slug_field='nome')
+
+    class Meta:
+        model = models.Vaga
+        fields = '__all__'
+
+
 class EventoSerializer(serializers.ModelSerializer):
     owner = serializers.SlugRelatedField(
         many=False,
         read_only=True,
         slug_field='username'
     )
+    vagas = VagaSerializer(many=True, read_only=True)
 
     class Meta:
         model = models.Evento
@@ -32,15 +42,6 @@ class EventoSerializer(serializers.ModelSerializer):
 class EspecialidadeSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Especialidade
-        fields = '__all__'
-
-
-class VagaSerializer(serializers.ModelSerializer):
-    especialidade = serializers.SlugRelatedField(many=False, read_only=True,
-                                         slug_field='nome')
-
-    class Meta:
-        model = models.Vaga
         fields = '__all__'
 
 
