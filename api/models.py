@@ -81,7 +81,7 @@ class CandidatoVaga(models.Model):
     state_vaga = models.PositiveSmallIntegerField(verbose_name="Status da Vaga", choices=TIPO_CHOICES)
 
     def __str__(self):
-        return f"Candidato {self.candidato.nome}. Vaga {self.vaga.especialidade.nome}."
+        return self.candidato.nome
 
 
 class AvaliacaoEvento(models.Model):
