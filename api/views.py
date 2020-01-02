@@ -61,15 +61,18 @@ class AvaliacaoEventoViewSet(viewsets.ModelViewSet):
 @permission_classes((permissions.IsAuthenticated,))
 def candidatar(request, id):
     vaga = get_object_or_404(models.Vaga, pk=id)
-    if request.user.username == vaga.evento.owner.username:
+    if request.user == vaga.evento.owner:
         return Response(
-            data={"detail": "Peladeiro não encontrado."},
+            data={"detail": "Não pode se candidatar ao próprio evento."},
+            status=status.HTTP_304_NOT_MODIFIED
+        )
+    elif vaga.candidatos_vaga.filter(candidato=request.user).exists():
+        return Response(
+            data={"detail": "Usuário já se candidatou nessa vaga."},
             status=status.HTTP_304_NOT_MODIFIED
         )
     cv = models.CandidatoVaga.objects.create(candidato=request.user, vaga=vaga, state_vaga=3)
-    print(cv)
     serializer = serializers.CandidatoVagaSerializer(cv)
-    print(serializer)
     return Response(
         data=serializer.data,
         status=status.HTTP_200_OK
