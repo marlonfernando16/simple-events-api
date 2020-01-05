@@ -17,10 +17,14 @@ class UserSerializer(serializers.ModelSerializer):
 class VagaSerializer(serializers.ModelSerializer):
     especialidade = serializers.SlugRelatedField(many=False, read_only=True,
                                          slug_field='nome')
+    qtd_candidatos = serializers.SerializerMethodField('get_qtd_candidatos')
+
+    def get_qtd_candidatos(self, obj):
+        return obj.candidatos_vaga.all().count()
 
     class Meta:
         model = models.Vaga
-        fields = '__all__'
+        fields = ['id', 'especialidade', 'qtd_vagas', 'evento', 'qtd_candidatos']
 
 
 class EventoSerializer(serializers.ModelSerializer):
