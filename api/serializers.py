@@ -24,7 +24,7 @@ class CandidatoVagaSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CandidatoVaga
         fields = ['id', 'candidato', 'vaga', 'nota_desempenho', 'state_vaga']
-        read_only_fields = ['candidato']
+        read_only_fields = ['candidato', 'vaga', ]
 
 
 class VagaSerializer(serializers.ModelSerializer):
