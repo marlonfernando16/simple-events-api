@@ -1,7 +1,9 @@
 .env
 simple_events_backend/.idea/
 db.sqlite3
-simple_events_backend/api/migratio
+simple_events_backend/api/migrations/__pycache__/
+simple_events_backend/api/__pycache__/
+simple_events_backend/__pycache__/
 media/
 env/
 .staticfiles/
