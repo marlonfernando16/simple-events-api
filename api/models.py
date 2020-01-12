@@ -75,7 +75,7 @@ class CandidatoVaga(models.Model):
         (3, NAOAVALIADO)
     )
 
-    candidato = models.OneToOneField(User, verbose_name="Candidato", on_delete=models.CASCADE)
+    candidato = models.ForeignKey(User, verbose_name="candidatos_vaga", on_delete=models.CASCADE)
     vaga = models.ForeignKey(Vaga, verbose_name="Vaga", related_name="candidatos_vaga", on_delete=models.CASCADE)
     nota_desempenho = models.PositiveIntegerField(verbose_name="Nota  de Desempenho", blank=True, null=True)
     state_vaga = models.PositiveSmallIntegerField(verbose_name="Status da Vaga", choices=TIPO_CHOICES)
