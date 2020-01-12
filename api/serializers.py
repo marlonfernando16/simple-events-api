@@ -14,17 +14,33 @@ class UserSerializer(serializers.ModelSerializer):
         }
 
 
+class CandidatoVagaSerializer(serializers.ModelSerializer):
+    candidato = serializers.SlugRelatedField(
+        many=False,
+        read_only=True,
+        slug_field='email'
+    )
+
+    class Meta:
+        model = models.CandidatoVaga
+        fields = ['id', 'candidato', 'vaga', 'nota_desempenho', 'state_vaga']
+        read_only_fields = ['candidato']
+
+
 class VagaSerializer(serializers.ModelSerializer):
     especialidade = serializers.SlugRelatedField(many=False, read_only=True,
                                          slug_field='nome')
     qtd_candidatos = serializers.SerializerMethodField('get_qtd_candidatos')
+    candidatos_vaga = CandidatoVagaSerializer(many=True, read_only=True)
 
     def get_qtd_candidatos(self, obj):
         return obj.candidatos_vaga.all().count()
 
     class Meta:
         model = models.Vaga
-        fields = ['id', 'especialidade', 'qtd_vagas', 'evento', 'qtd_candidatos']
+        fields = ['id', 'especialidade', 'qtd_vagas', 'qtd_candidatos', 'candidatos_vaga']
+
+        depth = 1
 
 
 class EventoSerializer(serializers.ModelSerializer):
@@ -46,12 +62,6 @@ class EventoSerializer(serializers.ModelSerializer):
 class EspecialidadeSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Especialidade
-        fields = '__all__'
-
-
-class CandidatoVagaSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.CandidatoVaga
         fields = '__all__'
 
 
