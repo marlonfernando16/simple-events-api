@@ -1,5 +1,5 @@
-from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, permissions, status
+from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from api import models, serializers, validators
@@ -19,16 +19,19 @@ class EventoViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.EventoSerializer
 
     def perform_create(self, serializer):
-        evento = serializer.save(owner=self.request.user)
         vagas = self.request.data.get('vagas')
-        if vagas:
-            for vaga in vagas:
-                especialidade = get_object_or_404(models.Especialidade, nome=vaga[0])
-                models.Vaga.objects.create(
-                    evento=evento,
-                    qtd_vagas=vaga[1],
-                    especialidade=especialidade
-                )
+        if not vagas:
+            return Response(
+                data={"detail": "Defina vagas para o evento."},
+                status=status.HTTP_304_NOT_MODIFIED
+             )
+        for vaga in vagas:
+            especialidade = get_object_or_404(models.Especialidade, nome=vaga[0])
+            models.Vaga.objects.create(
+                evento=serializer.save(owner=self.request.user),
+                qtd_vagas=vaga[1],
+                especialidade=especialidade
+            )
 
 
 class EspecialidadeViewSet(viewsets.ModelViewSet):
