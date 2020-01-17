@@ -33,6 +33,9 @@ class EventoViewSet(viewsets.ModelViewSet):
                 especialidade=especialidade
             )
 
+    def perform_update(self, serializer):
+        serializer.save(finalizado=self.request.data.get('finalizado'))
+
 
 class EspecialidadeViewSet(viewsets.ModelViewSet):
 
